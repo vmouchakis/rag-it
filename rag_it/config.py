@@ -1,0 +1,1 @@
+LLAMA2_7B = "models/7b-ggml-model-f32_q4_0.bin"
