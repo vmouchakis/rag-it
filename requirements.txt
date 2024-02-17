@@ -1,0 +1,2 @@
+llama-index==0.10.5
+llama-index-llms-llama-cpp==0.1.1
