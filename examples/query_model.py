@@ -6,10 +6,8 @@ import logging
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
-    logging.info("Loading models")
+    logging.info("Loading model")
     llm = Llm(model_path=LLAMA2_7B_PATH, temperature=0.0)
-    embed_model = EmbedModel()
-    logging.info("Models loaded")
-    engine = Engine(llm, embed_model, 'lotr', 'samples')
-    resp = engine.query("Who directed the Lord of the Rings trilogy?")
-    logging.info(resp)
+    logging.info("Model loaded")
+    response = llm.generate("Write a poem about Panathinaikos.")
+    logging.info(response)
