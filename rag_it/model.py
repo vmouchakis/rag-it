@@ -3,8 +3,7 @@ from llama_index.llms.llama_cpp.llama_utils import (
     messages_to_prompt,
     completion_to_prompt,
 )
-from typing import Any, Generator
-
+from typing import Generator
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 
@@ -23,8 +22,7 @@ class Llm:
             max_new_tokens=max_new_tokens,
             context_window=context_window,
             generate_kwargs={},
-            # set to at least 1 to use GPU
-            model_kwargs={"n_gpu_layers": 1},
+            model_kwargs={"n_gpu_layers": -1},
             messages_to_prompt=messages_to_prompt,
             completion_to_prompt=completion_to_prompt,
             verbose=verbose,
